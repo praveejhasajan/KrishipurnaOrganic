@@ -337,125 +337,142 @@ h6 {
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
-    font-size: 28px;
+    font-size: 32px;
     line-height: 0;
     margin-right: 10px;
     cursor: pointer;
     transition: color 0.3s;
+    z-index: 10001;
+    position: relative;
   }
 
   .navmenu {
     padding: 0;
     z-index: 9997;
+    position: relative;
   }
 
   .navmenu ul {
     display: none;
+    flex-direction: column;
     list-style: none;
-    position: absolute;
-    inset: 60px 20px 20px 20px;
-    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     margin: 0;
-    border-radius: 6px;
-    background-color: var(--nav-mobile-background-color);
+    padding: 80px 20px 20px 20px;
+    background: var(--nav-mobile-background-color, #fff);
+    box-shadow: 0 0 30px rgba(0,0,0,0.15);
+    border-radius: 0;
     overflow-y: auto;
-    transition: 0.3s;
-    z-index: 9998;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 10000;
   }
 
-  .navmenu a,
-  .navmenu a:focus {
-    color: var(--nav-dropdown-color);
-    padding: 10px 20px;
+  .navmenu.active ul {
+    display: flex;
+    animation: fadeInMenu 0.3s;
+  }
+
+  @keyframes fadeInMenu {
+    from { opacity: 0; transform: translateY(-20px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+
+  .navmenu ul li {
+    margin-bottom: 10px;
+  }
+
+  .navmenu ul li a {
+    color: var(--nav-dropdown-color, #555);
+    padding: 14px 20px;
+    font-size: 18px;
     font-family: var(--nav-font);
-    font-size: 17px;
     font-weight: 500;
+    border-radius: 6px;
+    background: none;
+    transition: background 0.2s, color 0.2s;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    white-space: nowrap;
-    transition: 0.3s;
   }
 
-  .navmenu a i,
-  .navmenu a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: 0.3s;
-    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  .navmenu ul li a:hover,
+  .navmenu ul li.active > a {
+    background: var(--nav-hover-color, #50d8af);
+    color: #fff;
   }
 
-  .navmenu a i:hover,
-  .navmenu a:focus i:hover {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-  }
-
-  .navmenu a:hover,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .active i,
-  .navmenu .active:focus i {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-    transform: rotate(180deg);
+  .navmenu .dropdown > a {
+    cursor: pointer;
   }
 
   .navmenu .dropdown ul {
-    position: static;
     display: none;
-    z-index: 99;
-    padding: 10px 0;
-    margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    position: static;
+    background: var(--nav-dropdown-background-color, #fff);
+    margin: 0 0 0 10px;
+    padding: 0;
+    border-radius: 0;
     box-shadow: none;
-    transition: all 0.5s ease-in-out;
+    border-left: 2px solid var(--nav-hover-color, #50d8af);
   }
 
-  .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
-  }
-
-  .navmenu .dropdown>.dropdown-active {
+  .navmenu .dropdown.open > ul {
     display: block;
-    background-color: rgba(33, 37, 41, 0.03);
+    animation: fadeInMenu 0.3s;
   }
 
-  .mobile-nav-active {
-    overflow: hidden;
+  .navmenu .dropdown ul li a {
+    font-size: 16px;
+    padding: 12px 20px;
+    color: var(--nav-dropdown-color, #555);
+    background: none;
   }
 
-  .mobile-nav-active .mobile-nav-toggle {
+  .navmenu .dropdown ul li a:hover {
+    background: var(--nav-hover-color, #50d8af);
     color: #fff;
-    position: absolute;
-    font-size: 32px;
-    top: 15px;
-    right: 15px;
-    margin-right: 0;
-    z-index: 9999;
   }
 
-  .mobile-nav-active .navmenu {
-    position: fixed;
+  /* Overlay effect when menu is open */
+  body.mobile-nav-active {
     overflow: hidden;
+  }
+  body.mobile-nav-active::before {
+    content: "";
+    position: fixed;
     inset: 0;
-    background: rgba(33, 37, 41, 0.8);
-    transition: 0.3s;
+   
+    z-index: 9999;
+    pointer-events: none;
+    transition: background 0.3s;
   }
 
-  .mobile-nav-active .navmenu>ul {
+  /* Toggle icon position when menu is open */
+  .mobile-nav-toggle.bi-x {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    color: #fff;
+    background: var(--nav-hover-color, #50d8af);
+    border-radius: 50%;
+    padding: 8px;
+    z-index: 10001;
+  }
+}
+
+@media (max-width: 991px) {
+  .navmenu ul {
+    display: none;
+  }
+  .navmenu.active ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-nav-toggle {
     display: block;
   }
 }

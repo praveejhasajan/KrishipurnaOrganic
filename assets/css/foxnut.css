@@ -1,0 +1,202 @@
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0;
+  background: #f8f9fa;
+}
+header {
+  background: none;
+  color: inherit;
+  padding: 0;
+  text-align: inherit;
+  box-shadow: none;
+}
+
+/* --- Bootstrap Reveal Template Navigation Styles --- */
+
+/* Topbar */
+.topbar {
+  background: #f7f7f7;
+  font-size: 15px;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eaeaea;
+}
+.topbar .contact-info a,
+.topbar .contact-info span {
+  color: #4caf50;
+  font-weight: 500;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+.topbar .bi {
+  margin-right: 0.3rem;
+  color: #4caf50;
+}
+
+/* Branding */
+.branding {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 0.5rem 0;
+}
+.logo .sitename {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4caf50;
+  margin: 0;
+  text-decoration: none;
+}
+
+/* Navmenu (Bootstrap Reveal style) */
+.navmenu {
+  display: flex;
+  align-items: center;
+}
+.navmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.2rem;
+}
+.navmenu ul li {
+  position: relative;
+}
+.navmenu ul li a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+  display: block;
+}
+.navmenu ul li a:hover,
+.navmenu ul li.active > a {
+  background: #4caf50;
+  color: #fff;
+}
+.navmenu .dropdown > a {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.navmenu .dropdown ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  min-width: 180px;
+  z-index: 10;
+  padding: 0.5rem 0;
+  border-radius: 4px;
+}
+.navmenu .dropdown.open > ul,
+.navmenu .dropdown:hover > ul,
+.navmenu .dropdown:focus-within > ul {
+  display: block;
+}
+.navmenu .dropdown ul li {
+  display: block;
+  margin: 0;
+}
+.navmenu .dropdown ul li a {
+  padding: 0.5rem 1rem;
+  color: #222;
+  background: none;
+}
+.navmenu .dropdown ul li a:hover {
+  background: #4caf50;
+  color: #fff;
+}
+.mobile-nav-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #4caf50;
+}
+
+/* Responsive Navigation (Bootstrap Reveal style) */
+@media (max-width: 991px) {
+  .navmenu {
+    position: relative;
+  }
+  .navmenu ul {
+    flex-direction: column;
+    gap: 0;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    display: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    z-index: 99;
+  }
+  .navmenu.active ul {
+    display: flex;
+  }
+  .mobile-nav-toggle {
+    display: block;
+  }
+  .navmenu .dropdown ul {
+    position: static;
+    box-shadow: none;
+    min-width: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+}
+
+/* --- Product Section Styles --- */
+.product-detail {
+  display: flex;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 2rem;
+}
+.product-image img {
+  max-width: 300px;
+  border-radius: 8px;
+}
+.product-info {
+  flex: 1;
+}
+.product-info h2 {
+  color: #4caf50;
+  margin-top: 0;
+}
+.product-info ul {
+  padding-left: 1.2rem;
+}
+.order-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background: #4caf50;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.order-btn:hover {
+  background: #388e3c;
+}
+
+/* Responsive for small screens */
+@media (max-width: 600px) {
+  .product-detail {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .product-image img {
+    max-width: 100%;
+  }
+}
