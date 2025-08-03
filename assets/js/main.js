@@ -226,6 +226,7 @@ if (toggleBtn) {
       navToggle.classList.toggle('bi-x');
     });
   }
+
   // Dropdown for mobile
   document.querySelectorAll('.navmenu .dropdown > a').forEach(function (dropdownToggle) {
     dropdownToggle.addEventListener('click', function (e) {
@@ -236,6 +237,22 @@ if (toggleBtn) {
         const submenu = dropdown.querySelector('ul');
         if (submenu) {
           submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+        }
+      }
+    });
+  });
+
+  // Hide mobile nav when any nav link is clicked (for small screens)
+  document.querySelectorAll('#navmenu ul li a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (document.body.classList.contains('mobile-nav-active')) {
+        document.body.classList.remove('mobile-nav-active');
+        if (navToggle) {
+          navToggle.classList.remove('bi-x');
+          navToggle.classList.add('bi-list');
+        }
+        if (navMenu) {
+          navMenu.classList.remove('active');
         }
       }
     });
