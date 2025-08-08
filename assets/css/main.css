@@ -1938,11 +1938,6 @@ section,
 .whatsapp-button:hover {
     transform: scale(1.1);
 }
-.email-float-button,
-.whatsapp-button {
-    outline: 2px dashed red;
-}
-
 /* Notification Bar */
 .notification-top {
     position: fixed;
