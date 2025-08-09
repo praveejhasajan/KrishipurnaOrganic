@@ -72,94 +72,81 @@
     </div>
   </header>
   <!-- End Header -->
-
-  <main>
-    <section class="container py-5">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center mb-4">
-          <h2 class="mb-3">Our Certifications</h2>
-          <p class="lead">Download and view our official certifications and compliance documents.</p>
-        </div>
+<main>
+  <section class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-center mb-4">
+        <h2 class="mb-3">Our Certifications</h2>
+        <p class="lead">Download and view our official certifications and compliance documents.</p>
       </div>
-      <div class="row justify-content-center">
-        <!-- List your PDF certificates below. Update the file names as per your assets/certificates folder -->
-        <div class="col-md-6 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"><i class="bi bi-file-earmark-pdf"></i>AALCK6338B</h5>
-              <a href="assets/certificates/AALCK6338B.pdf" target="_blank" class="btn btn-primary btn-sm"><i class="bi bi-download"></i> Download PDF</a>
-              <a href="assets/certificates/AALCK6338B.pdf" target="_blank" class="btn btn-outline-secondary btn-sm ms-2 view-pdf" data-pdf="assets/certificates/AALCK6338B.pdf"><i class="bi bi-eye"></i> View Online</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"><i class="bi bi-file-earmark-pdf"></i> APEDA LICENSE KRISHIPURNA</h5>
-              <a href="assets/certificates/APEDA LICENSE KRISHIPURNA.pdf" target="_blank" class="btn btn-primary btn-sm"><i class="bi bi-download"></i> Download PDF</a>
-              <a href="assets/certificates/APEDA LICENSE KRISHIPURNA.pdf" target="_blank" class="btn btn-outline-secondary btn-sm ms-2 view-pdf" data-pdf="assets/certificates/APEDA LICENSE KRISHIPURNA.pdf"><i class="bi bi-eye"></i> View Online</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"><i class="bi bi-file-earmark-pdf"></i> FSSAI License</h5>
-              <a href="assets/certificates/FSSAI LICENSE KRISHIPURNA ORGANIC PVT LTD.pdf" target="_blank" class="btn btn-primary btn-sm"><i class="bi bi-download"></i> Download PDF</a>
-              <a href="assets/certificates/FSSAI LICENSE KRISHIPURNA ORGANIC PVT LTD.pdf" target="_blank" class="btn btn-outline-secondary btn-sm ms-2 view-pdf" data-pdf="assets/certificates/FSSAI LICENSE KRISHIPURNA ORGANIC PVT LTD.pdf"><i class="bi bi-eye"></i> View Online</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"><i class="bi bi-file-earmark-pdf"></i> GST RC</h5>
-              <a href="assets/certificates/GST RC.pdf" target="_blank" class="btn btn-primary btn-sm"><i class="bi bi-download"></i> Download PDF</a>
-              <a href="assets/certificates/GST RC.pdf" target="_blank" class="btn btn-outline-secondary btn-sm ms-2 view-pdf" data-pdf="assets/certificates/GST RC.pdf"><i class="bi bi-eye"></i> View Online</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"><i class="bi bi-file-earmark-pdf"></i> SPICE + Part B_Approval Letter_AB2694348_Kirishipurna</h5>
-              <a href="assets/certificates/SPICE + Part B_Approval Letter_AB2694348_Kirishipurna.pdf" target="_blank" class="btn btn-primary btn-sm"><i class="bi bi-download"></i> Download PDF</a>
-              <a href="assets/certificates/SPICE + Part B_Approval Letter_AB2694348_Kirishipurna.pdf" target="_blank" class="btn btn-outline-secondary btn-sm ms-2 view-pdf" data-pdf="assets/certificates/SPICE + Part B_Approval Letter_AB2694348_Kirishipurna.pdf"><i class="bi bi-eye"></i> View Online</a>
-            </div>
-          </div>
-        </div>
-        <!-- Add more certificates below as needed, using the same structure -->
-        <!-- Example:
-        <div class="col-md-6 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"><i class="bi bi-file-earmark-pdf"></i> Certificate Name</h5>
-              <a href="assets/certificates/certificate-file.pdf" target="_blank" class="btn btn-primary btn-sm"><i class="bi bi-download"></i> Download PDF</a>
-              <a href="assets/certificates/certificate-file.pdf" target="_blank" class="btn btn-outline-secondary btn-sm ms-2"><i class="bi bi-eye"></i> View Online</a>
-            </div>
-          </div>
-        </div>
-        -->
-      </div>
-    </section>
+    </div>
 
-    <!-- PDF Modal -->
-    <div id="pdfModal" class="modal" tabindex="-1" style="display:none;">
-      <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">View Certificate</h5>
-            <button type="button" class="btn-close" id="closePdfModal"></button>
-          </div>
-          <div class="modal-body" style="height:80vh;">
-            <iframe src="" style="width:100%;height:100%;border:none;"></iframe>
-          </div>
+    <!-- Tabular Layout -->
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="table-responsive">
+          <table class="table table-bordered align-middle text-center">
+            <thead class="table-dark">
+              <tr>
+                <th>Document Name</th>
+                <th>Preview & Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Certificate 1 -->
+              <tr>
+                <td>AALCK6338B</td>
+                <td>
+                  <iframe src="assets/certificates/AALCK6338B.pdf" width="100%" height="150" style="border:1px solid #ccc;"></iframe>
+                  <br>
+                  <a href="assets/certificates/AALCK6338B.pdf" target="_blank" class="btn btn-sm btn-primary mt-2"><i class="bi bi-download"></i> Download</a>
+                </td>
+              </tr>
+              <!-- Certificate 2 -->
+              <tr>
+                <td>APEDA License - Krishipurna</td>
+                <td>
+                  <iframe src="assets/certificates/APEDA LICENSE KRISHIPURNA.pdf" width="100%" height="150" style="border:1px solid #ccc;"></iframe>
+                  <br>
+                  <a href="assets/certificates/APEDA LICENSE KRISHIPURNA.pdf" target="_blank" class="btn btn-sm btn-primary mt-2"><i class="bi bi-download"></i> Download</a>
+                </td>
+              </tr>
+              <!-- Certificate 3 -->
+              <tr>
+                <td>FSSAI License</td>
+                <td>
+                  <iframe src="assets/certificates/FSSAI LICENSE KRISHIPURNA ORGANIC PVT LTD.pdf" width="100%" height="150" style="border:1px solid #ccc;"></iframe>
+                  <br>
+                  <a href="assets/certificates/FSSAI LICENSE KRISHIPURNA ORGANIC PVT LTD.pdf" target="_blank" class="btn btn-sm btn-primary mt-2"><i class="bi bi-download"></i> Download</a>
+                </td>
+              </tr>
+              <!-- Certificate 4 -->
+              <tr>
+                <td>GST RC</td>
+                <td>
+                  <iframe src="assets/certificates/GST RC.pdf" width="100%" height="150" style="border:1px solid #ccc;"></iframe>
+                  <br>
+                  <a href="assets/certificates/GST RC.pdf" target="_blank" class="btn btn-sm btn-primary mt-2"><i class="bi bi-download"></i> Download</a>
+                </td>
+              </tr>
+              <!-- Certificate 5 -->
+              <tr>
+                <td>SPICE+ Part B Approval - Krishipurna</td>
+                <td>
+                  <iframe src="assets/certificates/SPICE + Part B_Approval Letter_AB2694348_Kirishipurna.pdf" width="100%" height="150" style="border:1px solid #ccc;"></iframe>
+                  <br>
+                  <a href="assets/certificates/SPICE + Part B_Approval Letter_AB2694348_Kirishipurna.pdf" target="_blank" class="btn btn-sm btn-primary mt-2"><i class="bi bi-download"></i> Download</a>
+                </td>
+              </tr>
+              <!-- Add more rows here -->
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
-    <!-- End PDF Modal -->
+  </section>
+</main>
 
-  </main>
 
   <!-- Footer -->
   <footer id="footer" class="footer">

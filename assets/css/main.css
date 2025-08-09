@@ -581,10 +581,10 @@ h6 {
 # Scroll Top Button
 --------------------------------------------------------------*/
 .scroll-top {
-  /* position: fixed; */
+  position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 15px;
+  right: 90px;
   bottom: 15px;
   z-index: 99999;
   background-color: var(--accent-color);
