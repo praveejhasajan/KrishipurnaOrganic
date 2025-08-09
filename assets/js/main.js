@@ -245,14 +245,16 @@ if (toggleBtn) {
   // Hide mobile nav when any nav link is clicked (for small screens)
   document.querySelectorAll('#navmenu ul li a').forEach(function(link) {
     link.addEventListener('click', function() {
-      if (document.body.classList.contains('mobile-nav-active')) {
+      const navToggle = document.querySelector('.mobile-nav-toggle');
+      const navMenu = document.querySelector('#navmenu');
+      if (document.body.classList.contains('mobile-nav-active') || (navMenu && navMenu.classList.contains('active'))) {
         document.body.classList.remove('mobile-nav-active');
+        if (navMenu) {
+          navMenu.classList.remove('active');
+        }
         if (navToggle) {
           navToggle.classList.remove('bi-x');
           navToggle.classList.add('bi-list');
-        }
-        if (navMenu) {
-          navMenu.classList.remove('active');
         }
       }
     });
