@@ -519,12 +519,10 @@ h6 {
 .sitename2{
   color:#28A745;
 }
-/*--------------------------------------------------------------
-# Global Footer
---------------------------------------------------------------*/
+
 .footer {
   color: var(--default-color);
-  background-color: GREEN;
+  background-color: rgb(21, 46, 63);
   font-size: 14px;
   text-align: center;
   padding: 20px 0;
