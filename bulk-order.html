@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Export Certifications | Krishipurna Organic</title>
-  <meta name="description" content="View and download Krishipurna Organic export certifications including IEC, APEDA, FSSAI, GST, and incorporation documents.">
-  <link rel="canonical" href="https://krishipurnaorganic.com/certifications.html">
-  <meta property="og:title" content="Export Certifications | Krishipurna Organic">
-  <meta property="og:description" content="Verify import-export credentials and download official compliance documents.">
+  <title>Bulk Order | Krishipurna Organic</title>
+  <meta name="description" content="Place bulk import orders for Makhana, Sattu, Poha, Millets, Oats, Bajra, and Cashew. Get custom packaging and shipment planning support.">
+  <link rel="canonical" href="https://krishipurnaorganic.com/bulk-order.html">
+  <meta property="og:title" content="Bulk Order Program | Krishipurna Organic">
+  <meta property="og:description" content="Container-scale bulk procurement with recurring shipment planning and export documentation support.">
   <meta property="og:type" content="website">
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -73,22 +73,38 @@
   <main class="main">
     <section class="section py-5">
       <div class="container">
-        <div class="row mb-4">
-          <div class="col-lg-8">
-            <h2>Export Certifications and Compliance</h2>
-            <p>International buyers can verify business and export credentials from the documents below.</p>
+        <div class="row g-4">
+          <div class="col-lg-7">
+            <h2>Bulk Order Program for Importers</h2>
+            <p>Designed for wholesalers, processors, and supermarket chains requiring stable supply, repeat shipment schedules, and consistent quality.</p>
+            <div class="row g-3 mt-2">
+              <div class="col-md-6"><div class="p-3 bg-light rounded h-100"><strong>Volume Benefits</strong><br>Better pricing for container-scale procurement.</div></div>
+              <div class="col-md-6"><div class="p-3 bg-light rounded h-100"><strong>Shipment Planning</strong><br>Monthly, quarterly, or annual dispatch plans.</div></div>
+              <div class="col-md-6"><div class="p-3 bg-light rounded h-100"><strong>Quality Documentation</strong><br>COA, packing list, invoice, and origin support.</div></div>
+              <div class="col-md-6"><div class="p-3 bg-light rounded h-100"><strong>Packaging Options</strong><br>Bulk sacks, retail pouches, and private label.</div></div>
+            </div>
           </div>
-          <div class="col-lg-4 text-lg-end">
-            <a href="export-inquiry.html" class="btn btn-success">Request Verified Export Quote</a>
+          <div class="col-lg-5">
+            <div class="card export-hero-card">
+              <div class="card-body p-4">
+                <h3 class="h4 mb-3">Submit Bulk Requirement</h3>
+                <form class="bulk-inquiry-form" id="bulkForm" data-script-url="PASTE_BULK_GOOGLE_SCRIPT_URL_HERE">
+                  <input type="hidden" name="subject" value="Bulk Order Lead">
+                  <input type="text" class="form-control mb-2" name="name" placeholder="Contact Person*" required>
+                  <input type="email" class="form-control mb-2" name="email" placeholder="Business Email*" required>
+                  <input type="text" class="form-control mb-2" id="bulkCompany" name="company" placeholder="Company Name*" required>
+                  <input type="text" class="form-control mb-2" id="bulkCountry" name="country" placeholder="Import Country*" required>
+                  <input type="text" class="form-control mb-2" id="bulkVolume" name="volume" placeholder="Approx Volume per month*" required>
+                  <textarea class="form-control mb-2" id="bulkNotes" name="details" rows="4" placeholder="Products needed, packaging format, destination port*" required></textarea>
+                  <textarea class="d-none" name="message" id="bulkMessage"></textarea>
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Bulk order inquiry submitted successfully.</div>
+                  <button type="submit" class="btn btn-success w-100">Send Bulk Inquiry</button>
+                </form>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="row g-3">
-          <div class="col-md-6 col-lg-4"><a class="card export-hero-card h-100 p-3 d-block" href="assets/certificates/AALCK6338B.pdf" target="_blank"><h3 class="h6">Import Export Code (IEC)</h3><p class="mb-0 small">Download document</p></a></div>
-          <div class="col-md-6 col-lg-4"><a class="card export-hero-card h-100 p-3 d-block" href="assets/certificates/APEDA LICENSE KRISHIPURNA.pdf" target="_blank"><h3 class="h6">APEDA License</h3><p class="mb-0 small">Download document</p></a></div>
-          <div class="col-md-6 col-lg-4"><a class="card export-hero-card h-100 p-3 d-block" href="assets/certificates/FSSAI LICENSE KRISHIPURNA ORGANIC PVT LTD.pdf" target="_blank"><h3 class="h6">FSSAI License</h3><p class="mb-0 small">Download document</p></a></div>
-          <div class="col-md-6 col-lg-4"><a class="card export-hero-card h-100 p-3 d-block" href="assets/certificates/GST RC.pdf" target="_blank"><h3 class="h6">GST Registration</h3><p class="mb-0 small">Download document</p></a></div>
-          <div class="col-md-6 col-lg-4"><a class="card export-hero-card h-100 p-3 d-block" href="assets/certificates/SPICE + Part B_Approval Letter_AB2694348_Kirishipurna.pdf" target="_blank"><h3 class="h6">Certificate of Incorporation</h3><p class="mb-0 small">Download document</p></a></div>
-          <div class="col-md-6 col-lg-4"><a class="card export-hero-card h-100 p-3 d-block" href="catalogues.html"><h3 class="h6">Product Catalogue</h3><p class="mb-0 small">View product and packaging portfolio</p></a></div>
         </div>
       </div>
     </section>
@@ -175,7 +191,9 @@
 </footer>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/js/main.js"></script>
+  <script></script>
 </body>
 </html>
 

@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Export Certifications | Krishipurna Organic</title>
-  <meta name="description" content="View and download Krishipurna Organic export certifications including IEC, APEDA, FSSAI, GST, and incorporation documents.">
-  <link rel="canonical" href="https://krishipurnaorganic.com/certifications.html">
-  <meta property="og:title" content="Export Certifications | Krishipurna Organic">
-  <meta property="og:description" content="Verify import-export credentials and download official compliance documents.">
+  <title>Export Inquiry | Krishipurna Organic</title>
+  <meta name="description" content="Send your international import requirement to Krishipurna Organic. Get product specifications, MOQ, lead time, and FOB/CIF export quote.">
+  <link rel="canonical" href="https://krishipurnaorganic.com/export-inquiry.html">
+  <meta property="og:title" content="Export Inquiry | Krishipurna Organic">
+  <meta property="og:description" content="Submit your import requirement and receive detailed export quotation with MOQ and lead time.">
   <meta property="og:type" content="website">
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 <body class="blank-page">
@@ -73,22 +74,74 @@
   <main class="main">
     <section class="section py-5">
       <div class="container">
-        <div class="row mb-4">
-          <div class="col-lg-8">
-            <h2>Export Certifications and Compliance</h2>
-            <p>International buyers can verify business and export credentials from the documents below.</p>
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-7">
+            <div class="card export-hero-card h-100">
+              <div class="card-body p-4 p-lg-5">
+                <h2>Global Export Inquiry</h2>
+                <p>Tell us your product, destination, and quantity. Our team will share a detailed export quotation with specification sheet, MOQ, lead time, and shipment terms.</p>
+                <div class="row g-3 mt-2">
+                  <div class="col-md-4">
+                    <div class="export-kpi">
+                      <h4>24h</h4>
+                      <p>Quotation turnaround</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="export-kpi">
+                      <h4>FOB/CIF</h4>
+                      <p>Flexible shipment terms</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="export-kpi">
+                      <h4>Global</h4>
+                      <p>International shipping support</p>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <h3 class="h5">Why international buyers work with us</h3>
+                <ul class="mb-0">
+                  <li>Reliable sourcing and export documentation</li>
+                  <li>Custom packaging and private label options</li>
+                  <li>Consistent lot quality and transparent communication</li>
+                  <li>Dedicated support from inquiry to dispatch</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-4 text-lg-end">
-            <a href="export-inquiry.html" class="btn btn-success">Request Verified Export Quote</a>
+          <div class="col-lg-5">
+            <div class="card export-hero-card">
+              <div class="card-body p-4">
+                <h3 class="h4 mb-3">Request Export Quote</h3>
+                <form action="assets/forms/contact.php" method="post" class="export-inquiry-form" id="exportInquiryForm">
+                  <input type="hidden" name="subject" value="Export Inquiry Lead">
+                  <input type="text" class="form-control mb-2" name="name" placeholder="Full Name*" required>
+                  <input type="email" class="form-control mb-2" name="email" placeholder="Business Email*" required>
+                  <input type="text" class="form-control mb-2" id="inqCompany" name="company" placeholder="Company Name*" required>
+                  <input type="text" class="form-control mb-2" id="inqCountry" name="country" placeholder="Destination Country*" required>
+                  <select class="form-select mb-2" id="inqProduct" name="product" required>
+                    <option value="">Select Product</option>
+                    <option>Makhana</option>
+                    <option>Sattu</option>
+                    <option>Poha</option>
+                    <option>Millets</option>
+                    <option>Bajra</option>
+                    <option>Oats</option>
+                    <option>Cashew</option>
+                  </select>
+                  <input type="text" class="form-control mb-2" id="inqQty" name="quantity" placeholder="Required Quantity (MT/Kg)*" required>
+                  <textarea class="form-control mb-2" id="inqDetails" name="details" rows="4" placeholder="Packaging preference, destination port, and target timeline*" required></textarea>
+                  <textarea class="d-none" name="message" id="inqMessage"></textarea>
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Inquiry submitted. Our export team will contact you shortly.</div>
+                  <button type="submit" class="btn btn-success w-100">Submit Export Inquiry</button>
+                </form>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="row g-3">
-          <div class="col-md-6 col-lg-4"><a class="card export-hero-card h-100 p-3 d-block" href="assets/certificates/AALCK6338B.pdf" target="_blank"><h3 class="h6">Import Export Code (IEC)</h3><p class="mb-0 small">Download document</p></a></div>
-          <div class="col-md-6 col-lg-4"><a class="card export-hero-card h-100 p-3 d-block" href="assets/certificates/APEDA LICENSE KRISHIPURNA.pdf" target="_blank"><h3 class="h6">APEDA License</h3><p class="mb-0 small">Download document</p></a></div>
-          <div class="col-md-6 col-lg-4"><a class="card export-hero-card h-100 p-3 d-block" href="assets/certificates/FSSAI LICENSE KRISHIPURNA ORGANIC PVT LTD.pdf" target="_blank"><h3 class="h6">FSSAI License</h3><p class="mb-0 small">Download document</p></a></div>
-          <div class="col-md-6 col-lg-4"><a class="card export-hero-card h-100 p-3 d-block" href="assets/certificates/GST RC.pdf" target="_blank"><h3 class="h6">GST Registration</h3><p class="mb-0 small">Download document</p></a></div>
-          <div class="col-md-6 col-lg-4"><a class="card export-hero-card h-100 p-3 d-block" href="assets/certificates/SPICE + Part B_Approval Letter_AB2694348_Kirishipurna.pdf" target="_blank"><h3 class="h6">Certificate of Incorporation</h3><p class="mb-0 small">Download document</p></a></div>
-          <div class="col-md-6 col-lg-4"><a class="card export-hero-card h-100 p-3 d-block" href="catalogues.html"><h3 class="h6">Product Catalogue</h3><p class="mb-0 small">View product and packaging portfolio</p></a></div>
         </div>
       </div>
     </section>
@@ -175,9 +228,47 @@
 </footer>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbzwhjKdiZocgV2zwppcd27fZtwPukBnXXH4Sz4gryEa4m0iN_VnaqclG1sTEpj99uqy/exec";
+
+    document.getElementById("exportInquiryForm").addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const data = {
+        name: document.querySelector('[name="name"]').value,
+        email: document.querySelector('[name="email"]').value,
+        company: document.getElementById("inqCompany").value,
+        country: document.getElementById("inqCountry").value,
+        product: document.getElementById("inqProduct").value,
+        quantity: document.getElementById("inqQty").value,
+        details: document.getElementById("inqDetails").value
+      };
+
+      const message = [
+        'Company: ' + data.company,
+        'Country: ' + data.country,
+        'Product: ' + data.product,
+        'Quantity: ' + data.quantity,
+        'Details: ' + data.details
+      ].join('\n');
+      document.getElementById('inqMessage').value = message;
+
+      fetch(scriptURL, {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify(data)
+      }).catch(() => {});
+
+      alert("Export inquiry submitted successfully");
+      document.getElementById("exportInquiryForm").reset();
+    });
+  </script>
 </body>
 </html>
+
 
 
 

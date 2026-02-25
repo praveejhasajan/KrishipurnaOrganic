@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Export Certifications | Krishipurna Organic</title>
-  <meta name="description" content="View and download Krishipurna Organic export certifications including IEC, APEDA, FSSAI, GST, and incorporation documents.">
-  <link rel="canonical" href="https://krishipurnaorganic.com/certifications.html">
-  <meta property="og:title" content="Export Certifications | Krishipurna Organic">
-  <meta property="og:description" content="Verify import-export credentials and download official compliance documents.">
+  <title>Become a Distributor | Krishipurna Organic</title>
+  <meta name="description" content="Partner with Krishipurna Organic as an international distributor. Access private label, regional exclusivity options, and export-ready organic products.">
+  <link rel="canonical" href="https://krishipurnaorganic.com/distributor.html">
+  <meta property="og:title" content="Distributor Partnership | Krishipurna Organic">
+  <meta property="og:description" content="Apply for international distribution partnership with private label and scalable export supply support.">
   <meta property="og:type" content="website">
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -73,22 +73,38 @@
   <main class="main">
     <section class="section py-5">
       <div class="container">
-        <div class="row mb-4">
-          <div class="col-lg-8">
-            <h2>Export Certifications and Compliance</h2>
-            <p>International buyers can verify business and export credentials from the documents below.</p>
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-7">
+            <h2>International Distributor Partnership</h2>
+            <p>Expand your portfolio with India-origin organic and traditional food products. We support market entry with commercial, branding, and logistics assistance.</p>
+            <div class="row g-3 mt-2">
+              <div class="col-md-6"><div class="p-3 bg-light rounded h-100"><strong>Distributor Margins</strong><br>Competitive commercial structure for region-specific growth.</div></div>
+              <div class="col-md-6"><div class="p-3 bg-light rounded h-100"><strong>Private Label Support</strong><br>Branded packaging and technical label guidance.</div></div>
+              <div class="col-md-6"><div class="p-3 bg-light rounded h-100"><strong>Marketing Collateral</strong><br>Product sheets, certifications, and sales references.</div></div>
+              <div class="col-md-6"><div class="p-3 bg-light rounded h-100"><strong>Scalable Supply</strong><br>Structured replenishment and forecast support.</div></div>
+            </div>
           </div>
-          <div class="col-lg-4 text-lg-end">
-            <a href="export-inquiry.html" class="btn btn-success">Request Verified Export Quote</a>
+          <div class="col-lg-5">
+            <div class="card export-hero-card">
+              <div class="card-body p-4">
+                <h3 class="h4 mb-3">Apply as Distributor</h3>
+                <form action="assets/forms/contact.php" method="post" class="php-email-form" id="distForm">
+                  <input type="hidden" name="subject" value="Distributor Lead">
+                  <input type="text" class="form-control mb-2" name="name" placeholder="Your Name*" required>
+                  <input type="email" class="form-control mb-2" name="email" placeholder="Business Email*" required>
+                  <input type="text" class="form-control mb-2" id="distCompany" placeholder="Company Name*">
+                  <input type="text" class="form-control mb-2" id="distCountry" placeholder="Country / Region*">
+                  <input type="text" class="form-control mb-2" id="distChannel" placeholder="Channel (Retail, HoReCa, Wholesale)*">
+                  <textarea class="form-control mb-2" id="distNotes" rows="4" placeholder="Current distribution network, product interest, monthly target*" required></textarea>
+                  <textarea class="d-none" name="message" id="distMessage"></textarea>
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Distributor application sent successfully.</div>
+                  <button type="submit" class="btn btn-success w-100">Submit Application</button>
+                </form>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="row g-3">
-          <div class="col-md-6 col-lg-4"><a class="card export-hero-card h-100 p-3 d-block" href="assets/certificates/AALCK6338B.pdf" target="_blank"><h3 class="h6">Import Export Code (IEC)</h3><p class="mb-0 small">Download document</p></a></div>
-          <div class="col-md-6 col-lg-4"><a class="card export-hero-card h-100 p-3 d-block" href="assets/certificates/APEDA LICENSE KRISHIPURNA.pdf" target="_blank"><h3 class="h6">APEDA License</h3><p class="mb-0 small">Download document</p></a></div>
-          <div class="col-md-6 col-lg-4"><a class="card export-hero-card h-100 p-3 d-block" href="assets/certificates/FSSAI LICENSE KRISHIPURNA ORGANIC PVT LTD.pdf" target="_blank"><h3 class="h6">FSSAI License</h3><p class="mb-0 small">Download document</p></a></div>
-          <div class="col-md-6 col-lg-4"><a class="card export-hero-card h-100 p-3 d-block" href="assets/certificates/GST RC.pdf" target="_blank"><h3 class="h6">GST Registration</h3><p class="mb-0 small">Download document</p></a></div>
-          <div class="col-md-6 col-lg-4"><a class="card export-hero-card h-100 p-3 d-block" href="assets/certificates/SPICE + Part B_Approval Letter_AB2694348_Kirishipurna.pdf" target="_blank"><h3 class="h6">Certificate of Incorporation</h3><p class="mb-0 small">Download document</p></a></div>
-          <div class="col-md-6 col-lg-4"><a class="card export-hero-card h-100 p-3 d-block" href="catalogues.html"><h3 class="h6">Product Catalogue</h3><p class="mb-0 small">View product and packaging portfolio</p></a></div>
         </div>
       </div>
     </section>
@@ -175,7 +191,18 @@
 </footer>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById('distForm').addEventListener('submit', function () {
+      document.getElementById('distMessage').value = [
+        'Company: ' + document.getElementById('distCompany').value,
+        'Country/Region: ' + document.getElementById('distCountry').value,
+        'Channel: ' + document.getElementById('distChannel').value,
+        'Details: ' + document.getElementById('distNotes').value
+      ].join('\n');
+    });
+  </script>
 </body>
 </html>
 
