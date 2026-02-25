@@ -66,6 +66,11 @@ body {
   font-family: var(--default-font);
 }
 
+/* Prevent horizontal scrolling from oversized elements */
+html, body {
+  overflow-x: hidden;
+}
+
 .hero.section {
   background: linear-gradient(135deg, #f7f1e6 0%, #ffffff 45%, #f2e9d8 100%);
 }
